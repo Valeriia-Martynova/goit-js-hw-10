@@ -1,8 +1,8 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-const iconOk = './img/circle.svg';
-const iconError = './img/octagon.svg';
+const iconOk = '/src/img/circle.svg';
+const iconError = '/src/img/octagon.svg';
     
 document.querySelector('.form').addEventListener('submit', (Event) => {
     Event.preventDefault();
