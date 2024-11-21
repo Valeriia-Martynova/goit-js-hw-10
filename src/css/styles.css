@@ -6,16 +6,8 @@
 */
 /* Common styles */
 @import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
 /* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
 
 /* Timer */
 input {
@@ -35,7 +27,7 @@ input {
   color: #2e2f42;
 }
 
-button {
+button[data-start]:disabled {
   border-radius: 8px;
   padding: 8px 16px;
   width: 75px;
@@ -43,10 +35,31 @@ button {
   background-color: #cfcfcf;
   font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   color: #989898;
   border: none;
+  cursor: not-allowed;
+}
+
+button[data-start] {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: none;
+  background-color: #4e75ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button[data-start]:hover,
+button[data-start]:focus {
+  background-color: #6c8cff;
 }
 
 .timer {
@@ -73,4 +86,93 @@ button {
   font-size: 16px;
   line-height: 150%;
   color: #2e2f42;
+}
+
+/* Snackbar */
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 156px;
+  margin-top: 36;
+  width: 156px;
+}
+
+.form input[type='number'] {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 346px;
+  height: 40px;
+  padding-right: 0;
+  margin-left: auto;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.form input[type='number']:hover,
+.form input[type='number']:focus {
+  border: 1px solid #000;
+  outline: none;
+}
+
+fieldset {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  stroke-width: 1px;
+  stroke: #808080;
+  width: 360px;
+  height: 78px;
+  padding: 0;
+  margin: auto;
+  border-width: 1px;
+}
+
+fieldset:hover,
+fieldset:focus {
+  border: 1px solid #000;
+}
+
+legend {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-left: 28px;
+  margin-bottom: 14px;
+}
+
+label input[type='radio'] {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  padding: 6px;
+  margin-right: 8px;
+}
+
+.radio {
+  margin-left: 48px;
+  margin-bottom: 8px;
+}
+
+.btn-bar {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  background-color: #4e75ff;
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.btn-bar:hover,
+.btn-bar:focus {
+  background-color: #6c8cff;
 }

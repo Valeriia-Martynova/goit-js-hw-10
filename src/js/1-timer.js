@@ -85,3 +85,13 @@ function updateTimerDisplay(days, hours, minutes, seconds) {
 function addLeadingZero(value) {
   return String(value).padStart(2, '0');
 }
+
+function activateStartButton() {
+  startButton.disabled = false; 
+  startButton.classList.add('active'); 
+}
+
+function deactivateStartButton() {
+  startButton.disabled = true; 
+  startButton.classList.remove('active'); 
+}
